@@ -1,3 +1,6 @@
+--STVORIMO HASH parking_spots KOJI JE NASA BAZA PODATAKA 
+--KOJA SADRZI 100 PARKIRNIH MJESTA int => "available"
+--NAREDBA ZA STVARANJE redis-cli --eval redis_db.lua
 
 local PARKING_SPOT_ID = 100
 

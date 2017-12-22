@@ -3,7 +3,7 @@ redis-cli --eval redis_db.lua
 
 redis-cli --eval park_plane.lua parking_spots, CONCORDE 3
 redis-cli --eval park_plane.lua parking_spots, BOEING_747 9
-redis-cli --eval park_plane.lua parking_spots, DC_9 5
+redis-cli --eval park_plane.lua parking_spots, DC9 5
 redis-cli --eval park_plane.lua parking_spots, DC_6 6
 redis-cli --eval park_plane.lua parking_spots, BOEING_737 5
 redis-cli --eval park_plane.lua parking_spots, AIRBUS_A380 2
