@@ -9,18 +9,18 @@ local function parkPlane(i, plane_id)
 end
 
 
-local PARKING_SPOT_ID = 100
+local plane_number = 80
 local plane_id = ARGV[1]
 
-for i=1, PARKING_SPOT_ID, 1 do
-	if redis.call("HGET", "PARKING_SPOTS", i) == plane_id then
+for i=1, plane_number, 1 do
+	if redis.call("HGET", "parking_spots", i) == plane_id then
 		return i.." is taken by "..plane_id
-	elseif redis.call("HGET", "PARKING_SPOTS", i) == "available"  then
-	   redis.call("HSET", "PARKING_SPOTS", i, plane_id)
+	elseif redis.call("HGET", "parking_spots", i) == "available"  then
+	   redis.call("HSET", "parking_spots", i, plane_id)
 	   return i
     end
 end
---local plane_id = ARGV[1]
+
 
 
 

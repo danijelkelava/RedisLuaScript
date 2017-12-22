@@ -10,3 +10,7 @@ We own one hundred parking spots, and we are planning to use Redis to assign eac
 Your task is to write a Redis script in Lua that takes an airplane ID as an argument and assigns
 a random available parking spot to the plane if it doesn't have one yet. It should always return
 the parking spot ID (even if it was assigned earlier). And don't worry about multiple airports, we will have a separate Redis instance running with this script at each airport.
+
+redis-cli --eval redis_db.lua
+redis-cli --eval park_plane.lua parking_spots , dc 1
+redis-cli --eval park_plane_2.lua parking_spots , dc 1

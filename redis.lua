@@ -27,7 +27,7 @@ for k,v in pairs(parking_spots) do
 end
 
 redis-cli --eval redis_db.lua
-redis-cli --eval park_plane_2.lua planes , dc 1
+redis-cli --eval park_plane_2.lua parking_spots , dc 1
 redis-cli --eval park_plane.lua
 
 cd Lua
