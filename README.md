@@ -1,4 +1,4 @@
-# RedisLuaScript
+<h1>RedisLuaScript</h1>
 
 Since we wrote our first task, Picky Airlines has gotten really popular. We expanded our fleet
 and now we have 80 autonomous planes! They are pretty awesome, but we haven't
@@ -11,6 +11,11 @@ Your task is to write a Redis script in Lua that takes an airplane ID as an argu
 a random available parking spot to the plane if it doesn't have one yet. It should always return
 the parking spot ID (even if it was assigned earlier). And don't worry about multiple airports, we will have a separate Redis instance running with this script at each airport.
 
+<h4>This command creates our database, it is redis hash with one hundred available parking spots.</h4>
 redis-cli --eval redis_db.lua
-redis-cli --eval park_plane.lua parking_spots , dc 1
-redis-cli --eval park_plane_2.lua parking_spots , dc 1
+
+<h4>This command assigns a parking spot of our choice to the plane, if plane have one yet it returns parking spot ID.</h4>
+redis-cli --eval park_plane.lua parking_spots, plane_id parking_spot_id(int)
+
+<h4>This command assigns first available parking spot to the plane amd returns parking spot ID.</h4>
+redis-cli --eval park_plane2.lua parking_spots, plane_id 
