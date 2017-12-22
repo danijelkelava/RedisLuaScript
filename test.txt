@@ -9,7 +9,11 @@ redis-cli --eval park_plane.lua parking_spots , BOEING_737 5
 redis-cli --eval park_plane.lua parking_spots , AIRBUS_A380 2
 
 redis-cli --eval park_plane2.lua parking_spots , MIG_29
-redis-cli --eval park_plane2.lua parking_spots , AIRBUS_A380
+redis-cli --eval park_plane2.lua parking_spots , F_15
 redis-cli --eval park_plane2.lua parking_spots , F_16
-redis-cli --eval park_plane2.lua parking_spots , F_22_RFAPTOR
+redis-cli --eval park_plane2.lua parking_spots , F_22_RAPTOR
 redis-cli --eval park_plane2.lua parking_spots , F_35
+redis-cli --eval park_plane2.lua parking_spots , A_10
+redis-cli --eval park_plane2.lua parking_spots , F_14
+redis-cli --eval park_plane2.lua parking_spots , SU_27
+redis-cli --eval park_plane2.lua parking_spots , SU_35

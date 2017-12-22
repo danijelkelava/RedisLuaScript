@@ -17,5 +17,5 @@ redis-cli --eval redis_db.lua
 <h4>This command assigns a parking spot of our choice to the plane, if plane have one yet it returns parking spot ID.</h4>
 redis-cli --eval park_plane.lua parking_spots , plane_id parking_spot_id(int)
 
-<h4>This command assigns first available parking spot to the plane amd returns parking spot ID.</h4>
+<h4>This command assigns first available parking spot to the plane and returns parking spot ID.</h4>
 redis-cli --eval park_plane2.lua parking_spots , plane_id 
